@@ -1,0 +1,68 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+}
+
+#navbar::before{
+    content: "";
+    background-color: #d988b9;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 34px 45px;
+}
+
+#logo img{
+    height: 53px;
+    margin: -23px -35px;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+body{
+    background-image: url('Resources/pinkbgg.jpeg');
+}
+
+/* Navigation Bar: List Items Styling */
+#navbar{
+    position: relative;
+}
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: black;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: #B0578D;
+}
