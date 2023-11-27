@@ -16,7 +16,6 @@
 
 #navbar::before{
     content: "";
-    background-color: #d988b9;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -24,7 +23,12 @@
     opacity: 0.8;
 }
 
-/* Navigation Bar: Logo and Image */
+.site p{
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+    margin: 12px;
+}
+
 #logo{
     margin: 34px 45px;
 }
@@ -36,16 +40,12 @@
     border-radius: 50px;
 }
 
-body{
-    background-image: url('Resources/pinkbgg.jpeg');
-}
-
-/* Navigation Bar: List Items Styling */
 #navbar{
     position: relative;
 }
 
 #navbar ul{
+    margin-left: 650px;
     display: flex;
 }
 
@@ -63,6 +63,67 @@ body{
 }
 
 #navbar ul li a:hover{
-    color: black;
-    background-color: #B0578D;
+    color: white;
+    background-color: #004225;
+}
+
+.picture{
+    background-color: #e6f5e0;
+    display: flex;
+    flex-direction: row;
+}
+
+.picture div{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 150px;
+}
+
+.picture div img{
+    height: 650px;
+    border-radius: 20px;
+}
+
+.picture div p{
+    font-family: 'Dancing Script', cursive;
+    margin-top: 200px;
+    font-size: 50px;
+}
+
+.text{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 180px;
+    margin-right: 180px;
+    border: 2px solid black;
+    padding: 50px;
+    border-radius: 100px;
+}
+
+.text p{
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    color: #011f12;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 150px;
+    grid-row-gap: 15px;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #D0E7D2;
+    height: 200px;
+    width: 500px;
+    opacity: 0.8;
 }
