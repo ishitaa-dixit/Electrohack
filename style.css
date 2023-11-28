@@ -153,7 +153,7 @@
     text-align: center;
     border-radius: 10px;
     background-color: #D0E7D2;
-    height: 300px;
+    height: 350px;
     width: 500px;
     opacity: 0.8;
 }
@@ -196,14 +196,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 250px;
+    height: 350px;
 }
 
 #flex-item-2 .header{
     display:flex;
     justify-content: space-between;
     align-items:center;
-    padding:10px;
+    padding: 7px;
 }
 
 #flex-item-2 .header button{
@@ -213,8 +213,8 @@
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    width:40px;
-    height:40px;
+    width: 30px;
+    height: 30px;
 
 }
 #flex-item-2 .days{
@@ -225,7 +225,35 @@
 #flex-item-2 .day{
     text-align: center;
     padding: 5px;
-    
+}
+
+#flex-item-2 .dates{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 2px;
+}
+#flex-item-2 .date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: 0.2%;
+
+}
+#flex-item-2 .date:hover,
+.date.active{
+    background: #004225;
+    color: blanchedalmond;
+}
+#flex-item-2 .date.inactive{
+    color: bisque;
 }
 
 footer{
@@ -235,6 +263,8 @@ footer{
     padding: 7px 20px;
     text-align: center;
 }
+
+
 
 .about{
     background-color: rgb(240, 249, 244);

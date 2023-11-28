@@ -32,6 +32,33 @@ const updateCalendar = () => {
     }
 
     datesElement.innerHTML = dateHTML;
+    dateHTML = '';
+    for (let i = 0; i < firstDayIndex; i++) {
+        dateHTML += `<div class="date inactive"></div>`;
+    }
+
+    for (let i = 1; i <= totalDays; i++) {
+        const date = new Date(currentYear, currentMonth, i);
+        const activeClass = date.toDateString() === new Date().toDateString() ? 'active' : '';
+        dateHTML += `<div class="date ${activeClass}" data-date="${date.toISOString()}">${i}</div>`;
+    }
+
+    for (let i = 1; i <= 6 - lastDayIndex; i++) {
+        dateHTML += `<div class="date inactive"></div>`;
+    }
+
+    datesElement.innerHTML = dateHTML;
+
+    // Add click event to each date
+    const dateElements = document.querySelectorAll('.date:not(.inactive)');
+    dateElements.forEach(dateElement => {
+        dateElement.addEventListener('click', () => {
+            const selectedDate = new Date(dateElement.dataset.date);
+            const formattedDate = selectedDate.toISOString().split('T')[0]; // Format date as 'YYYY-MM-DD'
+            
+            window.location.href = `/habit.html?date=${formattedDate}`
+        });
+    });
 };
 
 prevBtn.addEventListener('click', () => {
