@@ -29,6 +29,22 @@
         </ul>
       </div>
     </section>
+
+    <div class="container-2">
+      <h1>My Journal</h1>
+      <form id="journalForm">
+          <label for="entryDate">Date:</label>
+          <input type="date" id="entryDate" required>
+
+          <label for="entryText">Journal Entry:</label>
+          <textarea id="entryText" rows="4" required></textarea>
+
+          <button type="button" onclick="addEntry()">Add Entry</button>
+      </form>
+
+      <div id="entries"></div>
+  </div>
+
     <script src="script.js"></script>
     <script src="server.js"></script>
   </body>

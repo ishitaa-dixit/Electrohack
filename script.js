@@ -56,7 +56,7 @@ const updateCalendar = () => {
             const selectedDate = new Date(dateElement.dataset.date);
             const formattedDate = selectedDate.toISOString().split('T')[0]; // Format date as 'YYYY-MM-DD'
             
-            window.location.href = `/habit.html?date=${formattedDate}`
+            window.location.href = `./habit.html?date=${formattedDate}`
         });
     });
 };
